@@ -27,19 +27,20 @@ int BinarySearch(int arr[], int n, int val)
 
 int main()
 {
-    // cout << "Enter how many numbers: ";
+    cout << "Enter how many numbers: ";
     int val, n = 0;
     cin >> n;
-    // cout << "Enter the numbers: ";
+    cout << "Enter the numbers: ";
     int arr[n];
     for (int i = 0; i < n; i++)
     {
         cin >> arr[i];
     }
 
-    // cout << "Enter the value for search: ";
+    cout << "Enter the value for search: ";
     cin >> val;
-    // cout << "\n"<< "After sorting: ";
+    cout << "\n"
+         << "After sorting: ";
     int k = BinarySearch(arr, n, val);
     if (k == -1)
     {
