@@ -14,8 +14,6 @@ int main()
     {
         cin >> arr[i];
     }
-    selectionSort(arr, n);
-    BubbleSort(arr, n);
     sort(arr, arr + n);
     cout << "\n"
          << "After sorting: ";
