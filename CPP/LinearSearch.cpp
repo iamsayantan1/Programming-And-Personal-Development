@@ -1,5 +1,3 @@
-// #include <iostream>
-// #include <algorithm>
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -34,11 +32,11 @@ int main()
     int k = LinearSearch(arr, n, val);
     if (k == -1)
     {
-        cout << val << " is not present.";
+        cout << val << " is not present."<< endl;
     }
     else
     {
-        cout << "Location of the " << val << " is " << k << ".";
+        cout << "Location of the " << val << " is " << k << "."<< endl;
     }
     return 0;
 }
