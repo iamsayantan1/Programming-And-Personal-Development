@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 …or create a new repository on the command line
 echo "# Programming-And-Personal-Development" >> README.md
 git init
@@ -11,4 +12,19 @@ git push -u origin master
 …or push an existing repository from the command line
 git remote add origin https://github.com/iamsayantan1/Programming-And-Personal-Development.git
 git branch -M master
+=======
+…or create a new repository on the command line
+echo "# Programming-And-Personal-Development" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M master
+git remote add origin https://github.com/iamsayantan1/Programming-And-Personal-Development.git
+git push -u origin master
+
+
+…or push an existing repository from the command line
+git remote add origin https://github.com/iamsayantan1/Programming-And-Personal-Development.git
+git branch -M master
+>>>>>>> d430e7484d1a6fea6c0fcdb61b54cae3c9cd8776
 git push -u origin master
