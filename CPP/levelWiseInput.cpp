@@ -8,6 +8,11 @@ public:
     T data;
     vector<TreeNode<T>*> children;
     TreeNode(T data) : data(data) {}
+    ~TreeNode() {
+        for(int i=0; i<children.size(); i++)    {
+            delete children[i];
+        }
+    }
 };
 
 
@@ -164,6 +169,15 @@ void postOrderTraversal(TreeNode<T>* t)    {
     cout<<t->data<<" ";
 }
 
+template<typename T>
+void deleteTree(TreeNode<T>* t)    {
+    if(!t)  return;
+    for(int i=0;i<t->children.size();i++)   {
+        deleteTree(t->children[i]);
+    }
+    delete t;
+}
+
 // 1 3 2 3 4 2 5 6 2 7 8 0 0 0 0 1 9 0
 // 1 3 2 3 4 2 5 6 0 1 9 0 2 7 8 0 0 0
 int main()  {
@@ -182,5 +196,7 @@ int main()  {
     cout <<endl;
     cout<<"Post-Order Traversal: ";
     postOrderTraversal(root);
+    // deleteTree(root);
+    delete root;
     return 0;
 }
