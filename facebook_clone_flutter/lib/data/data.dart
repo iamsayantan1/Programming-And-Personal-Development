@@ -2,7 +2,8 @@ import 'package:facebook_clone_flutter/models/models.dart';
 
 final User currentUser = User(
   name: 'Sayantan Das',
-  imageUrl: 'https://images.unsplash.com/photo-1652794119961-4c5cf2dea75b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=465&q=80',
+  imageUrl:
+      'https://images.unsplash.com/photo-1652794119961-4c5cf2dea75b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=465&q=80',
 );
 
 final List<User> onlineUsers = [

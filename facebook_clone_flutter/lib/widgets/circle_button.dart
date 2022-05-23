@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class CircleButton extends StatelessWidget {
+class CircleButton extends StatefulWidget {
   final IconData icon;
   final double iconSize;
   final Function onPressed;
@@ -11,7 +11,26 @@ class CircleButton extends StatelessWidget {
     required this.iconSize,
     required this.onPressed,
   }) : super(key: key);
-  // const CircleButton({this.icon, this.iconSize, this.onPressed})
+
+  @override
+  State<CircleButton> createState() => _CircleButtonState();
+}
+
+class _CircleButtonState extends State<CircleButton>
+    with SingleTickerProviderStateMixin {
+  late AnimationController _controller;
+
+  @override
+  void initState() {
+    super.initState();
+    _controller = AnimationController(vsync: this);
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -21,11 +40,15 @@ class CircleButton extends StatelessWidget {
           BoxDecoration(color: Colors.grey[200], shape: BoxShape.circle),
       child: IconButton(
         icon: Icon(
-          icon,
+          widget.icon,
         ),
-        iconSize: iconSize,
+        iconSize: widget.iconSize,
         color: Colors.black,
-        onPressed: onPressed(),
+        onPressed: () {
+          setState(() {
+            widget.onPressed();
+          });
+        },
       ),
     );
   }

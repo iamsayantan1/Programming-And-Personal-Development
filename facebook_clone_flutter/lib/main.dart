@@ -2,7 +2,6 @@ import 'package:facebook_clone_flutter/screens/screens.dart';
 import 'package:flutter/material.dart';
 import 'package:facebook_clone_flutter/config/palette.dart';
 
-
 void main() {
   runApp(const MyApp());
 }
