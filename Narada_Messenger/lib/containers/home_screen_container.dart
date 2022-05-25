@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:narada_messenger/style/style.dart';
+import 'app_bar_package/app_bar_package.dart';
 
 class HomeScreenContainer extends StatefulWidget {
   const HomeScreenContainer({Key? key}) : super(key: key);
@@ -31,28 +31,7 @@ class _HomeScreenContainerState extends State<HomeScreenContainer> {
     return Scaffold(
       // extendBody: true,
       backgroundColor: Colors.white,
-      appBar: AppBar(
-        title: appName,
-        elevation: 5,
-        centerTitle: false,
-        flexibleSpace: Container(
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
-              colors: <Color>[
-                Colors.red,
-                Colors.blue,
-                Colors.green,
-                Colors.yellow,
-              ],
-            ),
-          ),
-        ),
-        actions: [
-          IconButton(onPressed: () {}, icon: Icon(Icons.bubble_chart_outlined))
-        ],
-      ),
+      appBar: appBar,
       body: screens[index],
       bottomNavigationBar: NavigationBarTheme(
         data: NavigationBarThemeData(

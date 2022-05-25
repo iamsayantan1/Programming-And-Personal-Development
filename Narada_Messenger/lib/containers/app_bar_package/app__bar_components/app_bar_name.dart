@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-Widget appName = Text(
+Widget appBarName = Text(
   'Narada',
   style: GoogleFonts.pacifico(
     textStyle: TextStyle(
