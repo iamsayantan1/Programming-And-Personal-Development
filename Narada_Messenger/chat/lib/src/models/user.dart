@@ -1,18 +1,19 @@
-import 'package:flutter/foundation.dart';
+// import 'package:flutter/foundation.dart';
 
 class User {
-  String get id => _id;
+  String get id => newId;
   String userName;
   String photoUrl;
-  String _id;
+  String newId;
   bool active;
   DateTime lastSeen;
 
   User({
-    required String userName,
-    required String photoUrl,
-    required bool active,
-    required DateTime lastSeen,
+    required this.userName,
+    required this.photoUrl,
+    required this.active,
+    required this.lastSeen,
+    required this.newId,
   });
 
   toJson() => {
@@ -24,12 +25,13 @@ class User {
 
   factory User.fromJson(Map<String, dynamic> json) {
     final user = User(
+      newId: json['newId'],
       userName: json['userName'],
       photoUrl: json['photoUrl'],
       active: json['active'],
       lastSeen: json['lastSeen'],
     );
-    user._id = json['id'];
+    user.newId = json['id'];
     return user;
   }
 }
