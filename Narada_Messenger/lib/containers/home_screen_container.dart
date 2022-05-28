@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../screens/home_screen.dart';
 import 'app_bar_package/app_bar_package.dart';
 
 class HomeScreenContainer extends StatefulWidget {
@@ -20,7 +21,7 @@ class _HomeScreenContainerState extends State<HomeScreenContainer> {
   // ];
 
   final screens = [
-    Center(child: Text('Chat', style: TextStyle(fontSize: 72))),
+    HomeScreen(),
     Center(child: Text('Story', style: TextStyle(fontSize: 72))),
     Center(child: Text('People', style: TextStyle(fontSize: 72))),
     Center(child: Text('Meet', style: TextStyle(fontSize: 72))),

@@ -6,8 +6,9 @@ import 'helpers.dart';
 
 void main() {
   Rethinkdb r = Rethinkdb();
-  Connection connection;
-  UserService sut;
+  Connection connection =
+      r.connect(host: "127.0.0.1", port: 28015) as Connection;
+  UserService sut = UserService(connection, r);
 
   setUp(() async {
     connection = await r.connect(host: "127.0.0.1", port: 28015);

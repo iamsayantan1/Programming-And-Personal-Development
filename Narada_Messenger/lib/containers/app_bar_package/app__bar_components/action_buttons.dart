@@ -3,6 +3,10 @@ import 'package:flutter/material.dart';
 enum Menu { itemOne, itemTwo, itemThree, itemFour }
 
 List<Widget> appBarActionButtons = [
+  IconButton(
+    icon: Icon(Icons.search_outlined),
+    onPressed: () {},
+  ),
   PopupMenuButton<Menu>(
     itemBuilder: (BuildContext context) => <PopupMenuEntry<Menu>>[
       const PopupMenuItem<Menu>(
