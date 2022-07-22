@@ -2,6 +2,12 @@ import java.util.Scanner;+
 public class LongComPrfx {
     public static void main(String[] args) {
         var sc = new Scanner(System.in);
+        System.out.println("Enter how many words you want to compare: ");
+        int num = sc.nextInt();
+        while(num > 0) {
+
+            
+        }
         String prefix = sc.nextLine();
     }
 }
